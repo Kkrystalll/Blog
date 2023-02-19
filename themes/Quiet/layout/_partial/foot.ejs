@@ -1,0 +1,18 @@
+<div class="footer">
+  <div class="Copyright">
+    ©<%= new Date().getFullYear() %> By <%- theme.author %>. 主题：<a
+      style="text-decoration: none; display: contents; color: #898f9f"
+      href="https://github.com/79e/hexo-theme-quiet"
+      >Quiet</a
+    >
+  </div>
+  <div class="contact">
+    <% theme.bottomIcon.forEach(item =>{%>
+    <a href="<%= item.toUrl %>">
+      <img src="<%= item.iconLink %>" alt="Quiet主题" />
+    </a>
+    <% }) %>
+  </div>
+</div>
+<%- partial('_widget/gotop') %> <%- partial('_widget/analytics') %> <%-
+partial('_widget/comment') %>
