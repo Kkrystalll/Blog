@@ -7,7 +7,7 @@ author: Krystal
 # 网站关键字
 keyword: ""
 #false是否开启文章背景图显示(随机图片)
-is_article_img: true
+is_article_img: false
 # 网站描述
 web_description: ""
 # 首页文章布局 默认 'card' 可选择 'block-card'
