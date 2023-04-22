@@ -1,10 +1,10 @@
 ---
 title: 從原理到精通的 React 全攻略課程
-comments: false
-categories: 課程心得
-toc: true
 date: 2023-02-19 18:58:45
+comments: false
+toc: true
 cover: "/image/reactCourse.jpg"
+categories: 課程心得
 tags:
   - React
   - 心得
@@ -17,7 +17,7 @@ tags:
 
 ## 課程內容貼和業界
 
-雖然課程名稱是 **React 完全進階攻略** 但老師上課會由淺入深的帶入，從 Components 如何撰寫，到 Testing Library 測試，所以相信跟我一樣對於 JavaScript 有基礎，但對 React 幾乎是零基礎的人，也可以跟得上進度，加上我自認自己滿幸運的，一起上課的學生們大部分都跟我一樣工作上有運用到 React ，除了老師上課舉例是業界工作上實際會遇到的雷外，同學們也會提問自己專案上遇到的問題，讓這堂課幾我可以說是完全貼合現在業界的需求。
+雖然課程名稱是 **React 完全進階攻略** 但老師上課會由淺入深的帶入，從 Components 如何撰寫，到 Testing Library 測試，所以相信跟我一樣對於 JavaScript 有基礎，但對 React 幾乎是零基礎的人，也可以跟得上進度，加上我自認自己滿幸運的，一起上課的學生們大部分都跟我一樣工作上有運用到 React ，除了老師上課舉例是業界工作上實際會遇到的雷外，同學們也會提問自己專案上遇到的問題，讓這堂課幾乎可以說是完全貼合現在業界的需求。
 
 ## 怎樣的人適合這門課程
 
