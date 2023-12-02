@@ -3,7 +3,7 @@ title: Docker - Docker Compose 讓多個容器同時跑起來
 tags:
   - Docker
   - 部署
-  - image
+  - docker compose
 comments: false
 toc: true
 cover: /image/docker.png

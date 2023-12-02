@@ -4,7 +4,7 @@ tags:
   - Docker
   - 部署
   - Dockerfile
-  - docker build
+  - docker run
 comments: false
 toc: true
 cover: /image/docker.png
