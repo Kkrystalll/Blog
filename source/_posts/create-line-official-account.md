@@ -117,3 +117,10 @@ date: 2024-08-22 20:40:03
    ![Channel access token](/image/lineOfficialAccount/36.png)
 
 以上為完整建立 LINE 官方帳號，以及為了後續串接 LINE 的第三方 API 所需要做的基本設定，實際辦過發現小流量的官方帳號可以免錢真的好佛啊～
+
+2024/09/07 更新：
+
+LINE 自 2024/09/03 強制啟用雙重驗證，我使用我先前已經註冊的帳號登入，會被引導到雙重驗證的頁面
+![雙重驗證](/image/lineOfficialAccount/37.png)
+只需要依照步驟去收驗證碼信，填入驗證碼即可成功驗證並登入!
+![驗證碼信](/image/lineOfficialAccount/38.png)
