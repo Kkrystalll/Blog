@@ -89,13 +89,16 @@ rails g scaffold Question title option_1 option_2 value_1 value_2
 - `rails g` : 是 rails 生成的簡寫，它是 Rails 提供的一個指令，用於產生各種文件和程式碼結構，以加速開發過程。
 - `Question` : 是你要建立的 model 名稱
 - `title option_1 option_2 value_1 value_2` : 在 Question model 裡面要的欄位，正常應該要寫成
-  ```
-  rails g scaffold Question title:string option_1:string option_2:string value_1:string value_2:string
-  ```
-  `title:string` 翻成中文意思就是 `欄位名稱:資料型態`，但若資料型態是 `string` ，可以簡寫成
-  ```
-  rails g scaffold Question title option_1 option_2 value_1 value_2
-  ```
+
+```
+rails g scaffold Question title:string option_1:string option_2:string value_1:string value_2:string
+```
+
+`title:string` 翻成中文意思就是 `欄位名稱:資料型態`，但若資料型態是 `string` ，可以簡寫成
+
+```
+rails g scaffold Question title option_1 option_2 value_1 value_2
+```
 
 ### 9. 使用 Scaffold 來快速生成 Result 的 CRUD
 
@@ -344,7 +347,7 @@ end
 
 ### 6. reply_message 邏輯
 
-定義 `reply_message` 方法，來撰寫我們想要回覆給使用者的訊息。
+定義 `reply_message` 方法，來撰寫我們想要回覆給使用者的訊息 [參考官方文件](https://developers.line.biz/en/reference/messaging-api/#text-message)。
 
 ```rb
 def reply_message(user_id, text)
