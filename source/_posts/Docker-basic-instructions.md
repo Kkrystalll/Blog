@@ -21,7 +21,7 @@ docker
 ```
 
 這個指令，這時可以看到所有 docker 可以下的指令
-![docker 可以下的指令](/image/dockerDay3/3_1.png)
+![docker 可以下的指令](/image/dockerDay3/3_1.webp)
 
 其中我們可以看到三大分類
 

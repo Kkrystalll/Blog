@@ -52,7 +52,7 @@ psql
 
 使用 psql 指令連接到您的 PostgreSQL 資料庫，可以看到如下
 
-![psql](/image/dockerDay17/17_1.png)
+![psql](/image/dockerDay17/17_1.webp)
 
 這邊可以看到後面的 14.5 就是 PostgreSQL 服務的版本，但若是你還是想再確認一次，或是知道更多詳細訊息，也可以在這邊再下
 
@@ -60,8 +60,8 @@ psql
 SELECT version();
 ```
 
-![psql 詳細訊息](/image/dockerDay17/17_2.png)
-![psql 詳細訊息](/image/dockerDay17/17_3.png)
+![psql 詳細訊息](/image/dockerDay17/17_2.webp)
+![psql 詳細訊息](/image/dockerDay17/17_3.webp)
 
 如圖我們就可以知道有關版本的更多詳細訊息。
 
@@ -69,7 +69,7 @@ SELECT version();
 
 要找公開包好的 image ，第一時間想到 Docker Hub，我在 Docker Hub 裡搜尋 [postgres](https://hub.docker.com/_/postgres) 找尋版本 14 開頭的 tag
 
-![Docker Hub postgres](/image/dockerDay17/17_4.png)
+![Docker Hub postgres](/image/dockerDay17/17_4.webp)
 
 因為沒有完全符合 14.5 的 tag ，所以我就選擇 `14-alpine` ，這時 docker-compose.yml 可以寫成：
 
@@ -81,7 +81,7 @@ image: postgres:14-alpine
 
 剛剛找好根據哪個 image ，然後呢？還有哪些要定義的？我們可以順勢參考頁面 [postgres](https://hub.docker.com/_/postgres)
 
-![Docker Hub postgres](/image/dockerDay17/17_5.png)
+![Docker Hub postgres](/image/dockerDay17/17_5.webp)
 
 這邊寫到需要設置環境變數，我們就加上去
 
@@ -149,15 +149,15 @@ docker-compose up --build
 
 使用 `docker-compose up --build` 建立＋啟動容器，通常會需要一小段時間，我們先讓子彈飛一會兒...
 
-![建立＋啟動容器](/image/dockerDay17/17_6.png)
+![建立＋啟動容器](/image/dockerDay17/17_6.webp)
 
 容器看似開起來，有動靜
 
-![建立＋啟動容器](/image/dockerDay17/17_7.png)
+![建立＋啟動容器](/image/dockerDay17/17_7.webp)
 
 但當我打開瀏覽器在網址搜尋 `http://0.0.0.0:3000` ，出現了跟之前一樣的
 
-![瀏覽器頁面](/image/dockerDay17/17_8.png)
+![瀏覽器頁面](/image/dockerDay17/17_8.webp)
 
 記得上次是因為我沒有指定 port ，於是我詢問谷歌大神，搜尋關鍵字 `docker compose port` 可以看到第一篇文章，也就是 [官方文件](https://docs.docker.com/compose/networking/) 說明 docker-compose.yml 檔也要寫 port ，這樣才可以知道容器的 port 要對應到主機的哪個 port ，供主機訪問，所以我在 app 的服務中加上
 
@@ -195,7 +195,7 @@ services:
 docker compose down
 ```
 
-![移除容器](/image/dockerDay17/17_9.png)
+![移除容器](/image/dockerDay17/17_9.webp)
 
 再重複上述動作
 
@@ -205,16 +205,16 @@ docker-compose up --build
 
 這時我們打開瀏覽器在網址搜尋 `http://0.0.0.0:3000` 可以看到
 
-![Create database](/image/dockerDay17/17_10.png)
+![Create database](/image/dockerDay17/17_10.webp)
 
 仔細看錯誤訊息只是因為我們的 database 還沒有建立，所以直接點選上面的 `Create database` 按鈕，這個按鈕其實就是我們平常打的 `bin/rails db:create` 。
 
 順利 Create database 後，不曉得大家腦中有沒有預期到等等會發生的錯誤了？
 
-![rails db:migrate](/image/dockerDay17/17_11.png)
+![rails db:migrate](/image/dockerDay17/17_11.webp)
 
 就是還需要跑 `rails db:migrate` ，一樣先點按按鈕即可
 
-![成功開啟專案](/image/dockerDay17/17_12.png)
+![成功開啟專案](/image/dockerDay17/17_12.webp)
 
 終於 🥳🥳🥳 看到了我們空空如也的首頁，這代表以後我們都可以透過 `docker compose up` 來啟動容器！

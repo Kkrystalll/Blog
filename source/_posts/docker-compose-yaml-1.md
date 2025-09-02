@@ -21,7 +21,7 @@ date: 2023-10-01 23:53:14
 
 跟 Dockerfile 一樣，我們可以新增一個 `docker-compose.yml` 或 `docker-compose.yaml` 檔案在根目錄，原因不外乎就是因為 `.yml` 或是 `.yaml` 都可以被識別為是 YAML 檔，那我秉持一貫懶惰的個性，就推薦直接用 `.yml` 為結尾。
 
-![新增 Docker Compose YAML](/image/dockerDay16/16_1.png)
+![新增 Docker Compose YAML](/image/dockerDay16/16_1.webp)
 
 ## 確定 docker-compose.yml 版本
 
@@ -43,7 +43,7 @@ docker-compose -v
 docker-compose --version
 ```
 
-![我的 docker-compose 版本](/image/dockerDay16/16_2.png)
+![我的 docker-compose 版本](/image/dockerDay16/16_2.webp)
 
 ### 為何我的版本是 2.10.2 上面寫 3.9？
 

@@ -19,7 +19,7 @@ date: 2023-09-23 21:16:30
 
 我們可以把多個不同版本和標籤的 Docker Image(映像)，放在 Docker Repository（儲存庫）這個倉庫保存著，每個 Docker 倉庫都只能有一個名稱，但可能有一個或多個 Tag (標籤) ，用來辨別 Image(映像) ，這也就是為什麼我們前一章使用 `docker images` 指令時，出現的是這些資訊
 
-![Docker Repository](/image/dockerDay8/8_1.png)
+![Docker Repository](/image/dockerDay8/8_1.webp)
 
 所以像是 `myapp` 以及 `ruby` 都是不同 Docker Repository（儲存庫），但是 `myapp` 這個 Docker Repository（儲存庫）可以有如 `latest` 與 `v1` 一個或多個 Tag (標籤)，所以我們可以用 `myapp:v1` 來辨別要找哪個 Image(映像)。
 

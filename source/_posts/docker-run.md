@@ -52,12 +52,12 @@ CMD ["rails", "server", "-b", "0.0.0.0"]
 
 雖然這個過程可能很繁瑣，但是我們在建置 Dockerfile 時，真的實際就是這樣，一開始不知道有哪些相異套件要用 RUN 裝進容器裡，都是一次次的錯誤，一個個加上去的。
 
-![docker run](/image/dockerDay14/14_1.png)
-![docker run](/image/dockerDay14/14_2.png)
+![docker run](/image/dockerDay14/14_1.webp)
+![docker run](/image/dockerDay14/14_2.webp)
 
 根據截圖看起來幾乎是成功了！他甚至跟我說 `Listening on http://0.0.0.0:3000` 我還不手刀打開瀏覽器，輸入網址 `http://0.0.0.0:3000`
 
-![docker run](/image/dockerDay14/14_3.png)
+![docker run](/image/dockerDay14/14_3.webp)
 
 關鍵字搜尋 again `docker run image localhost not found`，看到這篇 [stackoverflow](https://stackoverflow.com/questions/69341721/running-a-docker-container-on-localhost-not-working) ，決定試試
 
@@ -77,6 +77,6 @@ docker run -p 3000:3000 my-ruby:1.0
 
 順利退出後會有 `- Goodbye! Exiting` 的字樣，這時再重新使用 `docker run -p 3000:3000 my-ruby:1.0` 重新開起新的容器，並告訴他要監聽的 port 是 3000 port，再次順利開起，打開瀏覽器，輸入網址 `http://0.0.0.0:3000`
 
-![docker run](/image/dockerDay14/14_4.png)
+![docker run](/image/dockerDay14/14_4.webp)
 
 至少，有錯誤訊息，而且這個錯誤看起來像是 rails 專案會看到的紅畫面，裡面說的內容感覺跟資料庫有關，算是一個大進步的錯誤訊息，至少代表我們成功用 docker 開啟 rails 專案了！！！至於怎麼處理這個錯誤，明天再繼續說明。

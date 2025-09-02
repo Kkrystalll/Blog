@@ -49,7 +49,7 @@ None Network（無網路）適用時機會是比較特殊的情況，例如：�
 docker network ls
 ```
 
-![看本機 docker 網路列表](/image/dockerDay6/6_1.png)
+![看本機 docker 網路列表](/image/dockerDay6/6_1.webp)
 
 根據 [官網](https://docs.docker.com/engine/reference/commandline/network_ls/) 的圖片，我們可以看到在最一開始，使用 `docker network ls` 可以看到有三種名稱的網路：`bridge`、`host`、`none` 這三個是 docker 基礎預設的網路。
 
@@ -61,7 +61,7 @@ docker network ls
 docker inspect <container_id_or_name>
 ```
 
-![容器的詳細資訊](/image/dockerDay6/6_2.png)
+![容器的詳細資訊](/image/dockerDay6/6_2.webp)
 
 圖片是擷取有關網路部分的資訊，實際上還有很多其他資訊喔！
 根據圖片我們可以得知，這個 Container (容器)是使用預設的 Bridge Network (橋接網絡)，另外可以看到更多詳細的 ID 或是 IP 位置等等。
@@ -76,16 +76,16 @@ docker inspect <container_id_or_name>
 docker network create <network_name>
 ```
 
-![建立網路](/image/dockerDay6/6_3.png)
+![建立網路](/image/dockerDay6/6_3.webp)
 
 當建立成功可以看到一個獨一無二的 SHA 值
 我們再次使用 `docker network ls` 查看，可以看到 my-net 已經成功被建立
-![docker network ls](/image/dockerDay6/6_4.png)
+![docker network ls](/image/dockerDay6/6_4.webp)
 
 #### 將我的 container natwork 換成特定 natwork
 
 首先先使用 `docker ps` 看有哪些正在運行的 Container (容器)
-![docker ps](/image/dockerDay6/6_5.png)
+![docker ps](/image/dockerDay6/6_5.webp)
 
 ##### 連接 Network（網路）與 Container (容器)
 
@@ -93,7 +93,7 @@ docker network create <network_name>
 docker network connect <network_name> <container_id_or_name>
 ```
 
-![連接 Network 與 Container](/image/dockerDay6/6_6.png)
+![連接 Network 與 Container](/image/dockerDay6/6_6.webp)
 這邊執行成功並不會有輸出，所以看到如圖片的空白行是正常的！
 
 ##### 斷開 Network（網路）與 Container (容器) 的連接
@@ -102,7 +102,7 @@ docker network connect <network_name> <container_id_or_name>
 docker network disconnect <network_name> <container_id_or_name>
 ```
 
-![斷開連接](/image/dockerDay6/6_7.png)
+![斷開連接](/image/dockerDay6/6_7.webp)
 同上成功並不會有輸出。
 這時再使用 `docker inspect <container_id_or_name>` 可以看到這個容器，已經沒有連接 my_net
 
@@ -112,7 +112,7 @@ docker network disconnect <network_name> <container_id_or_name>
 docker network rm <network_name>
 ```
 
-![移除 Network](/image/dockerDay6/6_8.png)
+![移除 Network](/image/dockerDay6/6_8.webp)
 
 這時再使用 `docker network ls` 可以看到已經沒有 my_net 這個網路
 

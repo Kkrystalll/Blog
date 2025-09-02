@@ -20,7 +20,7 @@ date: 2023-09-27 18:58:33
 
 順利打開專案後（以下範例我都是使用 Visual Studio Code 這個編輯器），首先我們需要先在專案的**根目錄**新增一個名為 **`Dockerfile`** 的檔案
 
-![新增 Dockerfile](/image/dockerDay12/12_1.png)
+![新增 Dockerfile](/image/dockerDay12/12_1.webp)
 
 📍Dockerfile 是在 Docker 中預設的 Docker 映像建置檔的預設名字，若你想要取自己想要的名字也可以，但就是在建置 image 的時候，需要說明清楚用哪個文件來建置
 
@@ -46,31 +46,31 @@ docker build -f docker/Dockerfile .
 ruby -v
 ```
 
-![查看專案的 ruby 版本](/image/dockerDay12/12_2.png)
+![查看專案的 ruby 版本](/image/dockerDay12/12_2.webp)
 
 2. 若是 clone 的專案，那可以參考那個專案的 [README.md](https://github.com/Kkrystalll/rails-docker/tree/docker) ，正常都會在專案寫下使用的版本
 
-![查看專案的 ruby 版本](/image/dockerDay12/12_3.png)
+![查看專案的 ruby 版本](/image/dockerDay12/12_3.webp)
 
 3. 或是可以在專案裡找版本或配置的檔案，在 rails 專案就可以看 Gemfile 檔案
 
-![查看專案的 ruby 版本](/image/dockerDay12/12_4.png)
+![查看專案的 ruby 版本](/image/dockerDay12/12_4.webp)
 
 ## 找尋適合的基礎鏡像版本
 
 上面這麼多種方法我們都可以得知是使用 `ruby 3.2.2` ，那這時我們就要去 [Docker Hub ruby](https://hub.docker.com/_/ruby) 來找尋是否有符合的 image
 
-![Docker Hub ruby](/image/dockerDay12/12_5.png)
+![Docker Hub ruby](/image/dockerDay12/12_5.webp)
 
 看到後我又暈了，這麼多不同的 tag 都是 3.2.2 我到底要選用哪一個＠＠
 
 [Docker Hub ruby](https://hub.docker.com/_/ruby) 往下滑，有介紹不同 Variants 的差別是什麼可以幫助大家選擇
 
-![不同 Variants 的差別是什麼](/image/dockerDay12/12_6.png)
+![不同 Variants 的差別是什麼](/image/dockerDay12/12_6.webp)
 
 > This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 > 根據 `ruby:<version>` 上面的說明，「如果你不確定自己的需求是什麼，你可能想使用這個」，沒錯我自己也是覺得當不知道要選擇哪個時，選擇一個最標準的 image 準沒錯，所以我在剛剛眾多的 tags 找到了我的超人！
-> ![ruby:<version>](/image/dockerDay12/12_7.png)
+> ![ruby:<version>](/image/dockerDay12/12_7.webp)
 
 選好之後我們可以撰寫 Dockerfile 第一行
 
