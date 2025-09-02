@@ -7,7 +7,7 @@ tags:
   - docker private registry
 comments: false
 toc: true
-cover: /image/docker.png
+cover: /image/docker.webp
 categories:
   - Docker
   - 部署
@@ -20,7 +20,7 @@ date: 2023-10-03 18:20:33
 
 搜尋 [Docker Hub](https://hub.docker.com/) ，可以點選右上角的註冊或登入
 
-![註冊/登入 Docker Hub](/image/dockerDay18/18_1.png)
+![註冊/登入 Docker Hub](/image/dockerDay18/18_1.webp)
 
 若是跟我一樣已經有登入過，記住帳號的人，我們可以看到圖片中黃色框，他很貼心的顯示卡片可以讓我快速登入
 
@@ -28,11 +28,11 @@ date: 2023-10-03 18:20:33
 
 登入後便會看到我所有的儲存庫，如下圖可以看到有兩條白白的，代表我有兩個儲存庫了，但因為有些資料不方便透露，所以我這邊先填白色，正常來說會有儲存庫的名稱等相關資料。
 
-![建立私有儲存庫](/image/dockerDay18/18_2.png)
+![建立私有儲存庫](/image/dockerDay18/18_2.webp)
 
 無論你有沒有儲存庫都沒關係，我們可以直接點選右上方 `Create repository` 建立自己的儲存庫
 
-![建立自己的儲存庫](/image/dockerDay18/18_3.png)
+![建立自己的儲存庫](/image/dockerDay18/18_3.webp)
 
 根據圖片的步驟：
 
@@ -41,17 +41,17 @@ date: 2023-10-03 18:20:33
    📍 選擇公開就代表其他人在 Docker Hub 是可以直接搜尋到你的 Image 喔
    📍 若是免費方案，一個帳號只能建一個私有儲存庫，如果希望可以有更多儲存庫可以參考 [付費方案](https://hub.docker.com/billing/plan/update)
 
-![付費方案](/image/dockerDay18/18_4.png)
+![付費方案](/image/dockerDay18/18_4.webp)
 
 一個月 5 美元，就可以建無上限的私有儲存庫 3. 點選 `create` 建立
 
 建立後會直接進到這個儲存庫內，可以看到這個儲存庫的詳細資訊。
 
-![儲存庫的詳細資訊](/image/dockerDay18/18_5.png)
+![儲存庫的詳細資訊](/image/dockerDay18/18_5.webp)
 
 回到我的儲存庫列表，也可以看到我剛剛建的 `docker_test`
 
-![儲存庫列表](/image/dockerDay18/18_6.png)
+![儲存庫列表](/image/dockerDay18/18_6.webp)
 
 ## 將我的 image 推到 Docker Hub 儲存庫
 
@@ -63,11 +63,11 @@ docker login
 
 當打了 `docker login` 會依序要您輸入 `Username` 跟 `Password`
 
-![docker login](/image/dockerDay18/18_7.png)
+![docker login](/image/dockerDay18/18_7.webp)
 
 登入成功即會看到如圖的 `Login Succeeded`
 
-![Login Succeeded](/image/dockerDay18/18_8.png)
+![Login Succeeded](/image/dockerDay18/18_8.webp)
 
 看到前面建立的儲存庫有給提示，可以直接使用 `docker push krystallll/docker_test:tagname` 但是我們還沒有 krystallll/docker_test 這個 image，所以我們可以使用兩種方法
 
@@ -87,7 +87,7 @@ docker build -t krystallll/docker_test:1.0 .
 docker build -t krystallll/docker_test:1.0 . --push
 ```
 
-![docker build](/image/dockerDay18/18_9.png)
+![docker build](/image/dockerDay18/18_9.webp)
 
 2. 將 build 好的 image 使用 docker tag 給一個新標籤
 
@@ -103,6 +103,6 @@ docker tag my-ruby:1.0 krystallll/docker_test:1.0
 
 完成後我們可以去 docker_test 得 repository 看，可以看到剛剛有順利推送上來了
 
-![docker_test 得 repository](/image/dockerDay18/18_10.png)
+![docker_test 得 repository](/image/dockerDay18/18_10.webp)
 
 今天順利將 image 推上 Docker Hub ，明天就要來認識 Amazon Elastic Compute Cloud（Amazon EC2）的服務，來一步步實現部署大業！

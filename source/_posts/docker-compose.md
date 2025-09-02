@@ -6,7 +6,7 @@ tags:
   - docker compose
 comments: false
 toc: true
-cover: /image/docker.png
+cover: /image/docker.webp
 categories:
   - Docker
   - 部署

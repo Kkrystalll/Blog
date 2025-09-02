@@ -5,7 +5,7 @@ tags:
   - 部署
 comments: false
 toc: true
-cover: /image/docker.png
+cover: /image/docker.webp
 categories:
   - Docker
   - 部署
